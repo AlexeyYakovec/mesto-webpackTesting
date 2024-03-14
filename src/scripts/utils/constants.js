@@ -27,3 +27,8 @@ export const cardsContainer = document.querySelector(".cards__list");
 export const closeButtonModal = document.querySelectorAll(
   ".popup__close-button"
 );
+
+/* buttons */
+
+export const addCardButton = document.querySelector(".profile__add-button");
+export const profileButton = document.querySelector(".profile__edit-button");

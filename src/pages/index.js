@@ -19,6 +19,8 @@ import {
   popupImage,
   popupImagetitle,
   closeButtonModal,
+  addCardButton,
+  profileButton,
   cardsContainer,
 } from "../scripts/utils/constants";
 
@@ -64,3 +66,24 @@ function handleOverlay(e) {
     closePopup(activePopup);
   }
 }
+
+function setClosePopup(popup) {
+  const closeButton = popup.querySelector(".popup__close-button");
+  closeButton.addEventListener("click", () => {
+    closePopup(popup);
+  });
+}
+
+// event listeners
+
+addCardButton.addEventListener("click", () => {
+  openPopup(popupAddCard);
+});
+
+profileButton.addEventListener("click", () => {
+  openPopup(popupEditProfile);
+});
+
+setClosePopup(popupImageView);
+setClosePopup(popupEditProfile);
+setClosePopup(popupAddCard);
