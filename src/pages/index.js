@@ -122,7 +122,6 @@ function setEventListeners(form, settings) {
 
 function enableValidation(settings) {
   const formList = Array.from(document.querySelectorAll(settings.formSelector));
-
   formList.forEach((formElement) => {
     setEventListeners(formElement, settings);
   });
